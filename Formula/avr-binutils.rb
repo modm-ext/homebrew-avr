@@ -7,12 +7,6 @@ class AvrBinutils < Formula
 
   depends_on "gpatch" => :build if OS.linux?
 
-  bottle do
-    root_url "https://dl.bintray.com/osx-cross/bottles-avr"
-    sha256 "5c95ebe6b2e9a36115ca9ef1debb9dcfb140f65df1ffa2f2ef03e2dbbb676fa8" => :mojave
-    sha256 "42185c4eaa583f5e3985846afadf4abcdf4c5e3e54cc2da288c9cd2d4da8e05c" => :high_sierra
-  end
-
   uses_from_macos "zlib"
 
   # Support for -C in avr-size. See issue

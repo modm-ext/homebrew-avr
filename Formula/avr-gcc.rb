@@ -9,10 +9,7 @@ class AvrGcc < Formula
   head "https://gcc.gnu.org/git/gcc.git"
 
   bottle do
-    root_url "https://dl.bintray.com/osx-cross/bottles-avr"
-    rebuild 1
-    sha256 "aaf39cac6784b9d9ecb59ca599201144e4cdb11659d5b3799e811ce710296e2d" => :catalina
-    sha256 "d9a67510da4bfe62827c57238ef506ab8513a6b0fbafa51fd26ea5c9e8c35ab5" => :mojave
+    cellar :any_skip_relocation
   end
 
   # The bottles are built on systems with the CLT installed, and do not work
@@ -26,8 +23,8 @@ class AvrGcc < Formula
 
   # automake & autoconf are needed to build from source
   # with the ATMega168pbSupport option.
-  depends_on "automake" => :build
   depends_on "autoconf" => :build
+  depends_on "automake" => :build
 
   depends_on "avr-binutils"
 
